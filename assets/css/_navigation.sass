@@ -1,0 +1,63 @@
+header
+	padding-top: $outside-border
+
+	@include respond-to(handhelds)
+		margin-bottom: 1.5em
+
+	@include respond-to(medium-screens)
+		background-color: #fff
+		border: $outside-border solid #fff 
+		border-bottom: 0
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		z-index: 999
+		height: $header-height
+		transition: all 0.3s ease-in-out
+
+
+// Was passiert, wenn der Header verschwindet
+.header-up
+	top: $header-height*-1
+
+.header-up, .header-down
+	.nav-main
+		// border-bottom: 2px solid $brand-color-3
+		box-shadow: 0 4px 4px -4px rgba(0,0,0,0.5)
+
+		ul
+			right: 0
+
+
+.nav-main
+	@include respond-to(medium-screens)
+		height: 100% // damit border-bottom unten ist
+
+	ul
+		padding-bottom: 0.8em
+
+		@include respond-to(medium-screens)
+			position: absolute
+			bottom: 0
+			right: 0
+			left: 0
+			transition: all 0.2s ease-in-out 0.2s
+			text-align: right
+			padding-top: 0.8em
+
+		&:after // Clearfix wg. gefloateter li
+			content: ""
+			display: table
+			clear: both
+
+	li
+		@include respond-to(medium-screens)
+			display: inline-block
+			margin-left: 0.7em
+
+			&:first-child
+				float: left
+				margin: -0.7em 0 0 0 // Minus, damit Logo auf einer Line mit Links ist
+
+	

@@ -1,0 +1,50 @@
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>86/60 Konzept & Design</title>
+    <meta charset='utf-8'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <link href='assets/img/favicon.ico' rel='shortcut icon'>
+    <link href='assets/img/apple-touch-icon.png' rel='apple-touch-icon'>
+    <script type="text/javascript" src="//use.typekit.net/ssn2yla.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <link rel='stylesheet' href='assets/css/style.css'>
+  </head>
+  <body></body>
+</html>
+
+<section class='kontakt'>
+  <h1>Wir sind 86<span>/</span>60.<br>Und freuen uns auf Sie.</h1>
+  <p>
+    <strong>86/60 Konzept & Design OG</strong><br>
+    Liniengasse 2B<br>1060 Wien
+  </p>
+  <p>
+    Tel.
+    <a href='tel:+436608142150'>+43 660 81 42 150</a>
+    <br>
+    <a href='mailto:beide@8660.at'>beide@8660.at</a>
+  </p>
+</section>

@@ -1,0 +1,30 @@
+section
+	border: $outside-border solid #fff
+	height: 100%
+	
+	@include respond-to(medium-screens)
+		padding: 5em
+
+	@include respond-to(handhelds)
+		border-width: 1em
+		padding: 1em
+
+
+.coming-soon
+	background-color: #fff
+	background-position: bottom center
+	background-repeat: no-repeat
+	background-size: cover
+	background-image: url('heads')
+	
+	@include respond-to(medium-screens)
+		> div
+			position: absolute
+			left: 50%
+			top: 50%
+			margin-top: -7.5em
+			margin-left: -14em
+
+.kontakt
+	border-color: $brand-color-3
+	height: 100%
