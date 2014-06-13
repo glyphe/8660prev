@@ -1,13 +1,19 @@
 section
-	border: $outside-border solid #fff
-	height: 100%
+	min-height: 100%
+	background-color: $brand-color-3
 	
+	@include respond-to(handhelds)
+		padding: 1em
+
 	@include respond-to(medium-screens)
 		padding: 5em
 
-	@include respond-to(handhelds)
-		border-width: 1em
-		padding: 1em
+	@include respond-to(wide-screens)
+		padding: 10em
+
+	> div
+		max-width: 30em
+		margin: auto
 
 
 .coming-soon
@@ -16,15 +22,26 @@ section
 	background-repeat: no-repeat
 	background-size: cover
 	background-image: url('heads')
-	
-	@include respond-to(medium-screens)
-		> div
-			position: absolute
-			left: 50%
-			top: 50%
-			margin-top: -7.5em
-			margin-left: -14em
 
-.kontakt
-	border-color: $brand-color-3
+.splash
+	background-color: $brand-color-4
+	border: 1em solid #fff
+	position: absolute
+	left: 50%
+	top: 50%
+	width: 700px
+	height: 400px
+	margin-left: -350px
+	margin-top: -200px
+	min-height: inherit
+	padding: 3em 5em
+
+	h1
+		font-size: 1.8em
+
+	> div
+		max-width: inherit
+
+.splash-bg
+	background-color: rgba(0,0,0,0.2)
 	height: 100%
