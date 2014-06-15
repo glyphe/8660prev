@@ -27,3 +27,28 @@ h1
 p
 	line-height: 1.6
 	margin: 1em 0
+
+input
+	font-family: "ff-more-web-pro", "More Pro", Times, "Times New Roman", serif
+	padding: 0.2em 0.4em
+	border: 2px solid $brand-color-5
+
+	&[type^="email"]
+		background-color: $brand-color-4
+
+		&:focus
+			border-color: darken($brand-color-5, 20%)
+			outline: none
+
+	&[type^="submit"]
+		background-color: $brand-color-5
+		color: #fff
+		transition: background 0.3s ease-in-out, border 0.3s ease-in-out
+
+		&:hover
+			background-color: darken($brand-color-5, 20%)
+			border-color: darken($brand-color-5, 20%)
+
+		&:active
+			background-color: $brand-color-2
+			border-color: $brand-color-2

@@ -1,15 +1,19 @@
 section
 	min-height: 100%
 	background-color: $brand-color-3
+	border-bottom: $outside-border solid #fff
 	
 	@include respond-to(handhelds)
 		padding: 1em
+		padding-bottom: 2em
 
 	@include respond-to(medium-screens)
 		padding: 5em
+		padding-bottom: 3em
 
 	@include respond-to(wide-screens)
 		padding: 10em
+		padding-bottom: 5em
 
 	> div
 		max-width: 30em
@@ -41,6 +45,12 @@ section
 
 	> div
 		max-width: inherit
+
+.newsletter
+	margin-top: 3em
+
+	form
+		margin-top: -0.5em
 
 .splash-bg
 	background-color: rgba(0,0,0,0.2)
