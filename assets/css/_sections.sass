@@ -5,7 +5,6 @@ section
 	
 	@include respond-to(handhelds)
 		padding: 1em
-		padding-bottom: 2em
 
 	@include respond-to(medium-screens)
 		padding: 5em
@@ -26,6 +25,13 @@ section
 	background-repeat: no-repeat
 	background-size: cover
 	background-image: url('heads')
+
+	> div
+		animation-name: fade-in
+		animation-delay: 0.5s
+		animation-duration: 2s
+		animation-timing-function: ease
+		animation-iteration-count: 1
 
 .splash
 	background-color: $brand-color-4

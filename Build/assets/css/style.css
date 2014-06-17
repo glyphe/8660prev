@@ -28,8 +28,7 @@ section {
   border-bottom: 1.5rem solid white; }
   @media only screen and (max-width: 620px) {
     section {
-      padding: 1em;
-      padding-bottom: 2em; } }
+      padding: 1em; } }
   @media only screen and (min-width: 621px) {
     section {
       padding: 5em;
@@ -48,6 +47,12 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../img/heads.jpg); }
+  .coming-soon > div {
+    animation-name: fade-in;
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1; }
 
 .splash {
   background-color: #e6e6e6;
@@ -128,7 +133,8 @@ p {
 input {
   font-family: "ff-more-web-pro", "More Pro", Times, "Times New Roman", serif;
   padding: 0.2em 0.4em;
-  border: 2px solid #a0a0a0; }
+  border: 2px solid #a0a0a0;
+  border-radius: none; }
   input[type^="email"] {
     background-color: #e6e6e6; }
     input[type^="email"]:focus {
@@ -144,6 +150,9 @@ input {
     input[type^="submit"]:active {
       background-color: #dc0000;
       border-color: #dc0000; }
+    @media only screen and (min-width: 621px) {
+      input[type^="submit"] {
+        margin-left: -10px; } }
 
 header {
   padding-top: 1.5rem; }
@@ -221,3 +230,16 @@ a:focus {
 
 a[href^="mailto"], a[href^="tel"], a[href^="https://"], a.hidden {
   background-image: none; }
+
+@keyframes fade-in {
+  0% {
+    -webkit-transform: translate(0, -50px);
+    transform: translate(0, -50px);
+    opacity: 0; }
+
+  90% {
+    opacity: 1; }
+
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0); } }
