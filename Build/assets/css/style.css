@@ -71,6 +71,9 @@ section {
   .splash > div {
     max-width: inherit; }
 
+.icon-x {
+  fill: #dc0000; }
+
 .newsletter {
   margin-top: 3em; }
   .newsletter form {
