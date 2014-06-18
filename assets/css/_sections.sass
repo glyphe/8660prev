@@ -27,24 +27,48 @@ section
 	background-image: url('heads')
 
 	> div
+		-webkit-animation-name: fade-in
 		animation-name: fade-in
+
+		-webkit-animation-delay: 0.5s
 		animation-delay: 0.5s
+
+		-webkit-animation-duration: 2s
 		animation-duration: 2s
+
+		-webkit-animation-timing-function: ease
 		animation-timing-function: ease
+
+		-webkit-animation-iteration-count: 1
 		animation-iteration-count: 1
 
-.splash
+
+.dummy-content
+	background: url(bg-zeichenschatz)
+	background-repeat: no-repeat
+	background-position: top center
+	height: 100%
+	margin: -1.5rem
+
+.splash-bg
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background-color: rgba(0,0,0,0.6)
+
+.splash-content
 	background-color: $brand-color-4
 	border: 1em solid #fff
 	position: absolute
 	left: 50%
 	top: 50%
-	width: 700px
-	height: 400px
-	margin-left: -350px
+	width: 720px
+	margin-left: -360px
 	margin-top: -200px
 	min-height: inherit
-	padding: 3em 5em
+	padding: 70px 60px
 
 	h1
 		font-size: 1.8em
@@ -52,15 +76,27 @@ section
 	> div
 		max-width: inherit
 
-.icon-x
-	fill: $brand-color-2
+.close-link
+	position: absolute
+	right: 20px
+	top: 20px
+
+	&:link, &:visited
+		background-image: inherit
+
+		.icon-x
+			fill: #888
+
+	&:hover
+		.icon-x
+			fill: $brand-color-2
+
+	&:active
+		.icon-x
+			fill: $brand-color-1
 
 .newsletter
 	margin-top: 3em
 
 	form
 		margin-top: -0.5em
-
-.splash-bg
-	background-color: rgba(0,0,0,0.2)
-	height: 100%
